@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Conexión previa con Google Fonts para mejorar rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importación de las fuentes Inter y Roboto Condensed -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Formulario de inscripción</title>
+
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- Título principal del formulario -->
+<h1>FORMULARIO DE INSCRIPCIÓN</h1>
+
+<!-- Inicio del formulario -->
+<form>
+
+    <!-- Agrupa la información general -->
+    <fieldset>
+        <legend>Información general:</legend>
+
+        <!-- Campos de texto para fecha y consecutivo -->
+        <label>Fecha de entrega:</label><input type="text">
+        <label>Consecutivo de inscripción No:</label><input type="text">
+
+        <!-- Selección del área mediante checkboxes -->
+        <h4>Relacione el area a la cual se esta inscribiendo:</h4>
+        <label>Área:</label><br>
+
+        <input type="checkbox" id="area1">
+        <label for="area1">Humanidades</label>
+
+        <input type="checkbox" id="area2">
+        <label for="area2">Jurídica</label>
+
+        <input type="checkbox" id="area3">
+        <label for="area3">Electivas</label>
+
+        <!-- Campo para asignaturas -->
+        <label>Relacione las asignaturas a las que se inscribe (maximo 2)</label>
+        <input type="text">
+    </fieldset>
+
+    <!-- Información personal del aspirante -->
+    <fieldset>
+        <legend>Información personal:</legend>
+
+        <!-- Datos básicos -->
+        <label>Primer apellido:</label><input type="text">
+        <label>Segundo apellido:</label><input type="text">
+        <label>Nombre(s):</label><input type="text">
+
+        <label>Documento de identidad No:</label><input type="text">
+
+        <!-- Selección de sexo con botones tipo radio -->
+        <label>Sexo:</label>
+        <input type="radio" id="F"><label for="F">F</label>
+        <input type="radio" id="M"><label for="M">M</label><br>
+
+        <label>País:</label><input type="text">
+    </fieldset>
+
+    <!-- Lugar y fecha de nacimiento -->
+    <fieldset>
+        <legend>Lugar y fecha de nacimiento:</legend>
+
+        <label>Fecha:</label><input type="text">
+        <label>Municipio:</label><input type="text">
+        <label>Departamento:</label><input type="text">
+    </fieldset>
+
+    <!-- Dirección de contacto -->
+    <fieldset>
+        <legend>Dirección de Correspondencia</legend>
+
+        <label>Departamento/Municipio:</label><input type="text">
+        <label>Teléfono:</label><input type="text">
+        <label>Email:</label><input type="text">
+    </fieldset>
+
+    <!-- Disponibilidad del aspirante -->
+    <fieldset>
+        <legend>Disponibilidad de tiempo para desarrollar la cátedra</legend>
+
+        <!-- Selección de días disponibles -->
+        <label>Días:</label>
+        <input type="checkbox" id="Lunes"><label for="Lunes">Lunes</label>
+        <input type="checkbox" id="Martes"><label for="Martes">Martes</label>
+        <input type="checkbox" id="Miercoles"><label for="Miercoles">Miercoles</label>
+        <input type="checkbox" id="Jueves"><label for="Jueves">Jueves</label>
+        <input type="checkbox" id="Viernes"><label for="Viernes">Viernes</label>
+        <input type="checkbox" id="Sabado"><label for="Sabado">Sabado</label><br>
+
+        <!-- Selección de jornada -->
+        <label>Jornada:</label>
+        <input type="radio" id="Mañana"><label for="Mañana">Mañana</label>
+        <input type="radio" id="Tarde"><label for="Tarde">Tarde</label>
+    </fieldset>
+
+    <!-- Información sobre documentos adjuntos -->
+    <fieldset>
+        <legend>Documentos adjuntos</legend>
+
+        <label>Hoja de vida, soportada en (Número de folios entregados)</label>
+        <input type="text"><br>
+
+        <label>Fecha y hora de recepción de documentos:</label>
+        <input type="text" id="Fecha">
+        <input type="text" id="Hora">
+    </fieldset>
+
+    <!-- Declaración informativa -->
+    <fieldset>
+        <legend>Documentos adjuntos a este formulario</legend>
+
+        <!-- Texto descriptivo del proceso de inscripción -->
+        <p>
+            La hoja de vida del profesional, arriba señalado se radicó ante la Secretaria del
+            Area Académica de la Escuela, con el fin de inscribirse para participar dentro de
+            la convocatoria de selección de profesionales para conformar el Banco de elegibles
+            como docentes hora cátedra de la Escuela de Policia Rafael Reyes, en los programas
+            de TÉCNICO PROFESIONAL EN SERVICIO DE POLICÍA
+        </p>
+    </fieldset>
+
+    <!-- Firmas -->
+    <label>Firma del aspirante (Nombres y Apellidos):</label>
+    <input type="text"><br>
+
+    <label>Firma funcionario que recepciono el cargo:</label>
+    <input type="text">
+
+</form>
+
+</body>
+</html>

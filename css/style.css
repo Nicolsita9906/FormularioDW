@@ -1,0 +1,53 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Inter', sans-serif; /* Define la fuente principal del sitio */
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+}
+
+/* Estilo del título principal */
+h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Contenedor principal del formulario */
+form {
+    background: white; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espacio interno */
+    border-radius: 8px; /* Bordes redondeados */
+    max-width: 900px; /* Ancho máximo del formulario */
+    margin: auto; /* Centra el formulario horizontalmente */
+}
+
+/* Estilo para agrupar secciones del formulario */
+fieldset {
+    margin-bottom: 20px; /* Espacio inferior entre secciones */
+    padding: 15px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+/* Estilo del título de cada sección */
+legend {
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo general para los campos de entrada */
+input {
+    margin: 5px; /* Espacio externo entre inputs */
+    padding: 5px; /* Espacio interno dentro del input */
+}
+
+/* Estilo del botón */
+button {
+    background-color: #2e86de; /* Color azul del botón */
+    color: white; /* Texto blanco */
+    padding: 10px 15px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano al pasar */
+}
+
+/* Efecto cuando el mouse pasa sobre el botón */
+button:hover {
+    background-color: #1b4f72; /* Azul más oscuro al pasar el cursor */
+}
