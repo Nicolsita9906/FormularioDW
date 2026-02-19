@@ -29,25 +29,37 @@
         <legend>Información general:</legend>
 
         <!-- Campos de texto para fecha y consecutivo -->
-        <label>Fecha de entrega:</label><input type="text">
-        <label>Consecutivo de inscripción No:</label><input type="text">
+        <label>Fecha de entrega:</label>
+        <input type="text" id="fechaActual" readonly>
+        <label>Consecutivo de inscripción No:</label><input type="text" value="26060219" disabled>
 
         <!-- Selección del área mediante checkboxes -->
         <h4>Relacione el area a la cual se esta inscribiendo:</h4>
         <label>Área:</label><br>
+        <select id="area" name="areas">
+            <option value="" disabled selected>Seleccione un área</option>
 
-        <input type="checkbox" id="area1">
-        <label for="area1">Humanidades</label>
-
-        <input type="checkbox" id="area2">
-        <label for="area2">Jurídica</label>
-
-        <input type="checkbox" id="area3">
-        <label for="area3">Electivas</label>
+            <option value="Humanidades">Humanidades</option>
+            <option value="Juridica">Juridíca</option>
+            <option value="Electiva">Electivas</option>
+        </select>
 
         <!-- Campo para asignaturas -->
-        <label>Relacione las asignaturas a las que se inscribe (maximo 2)</label>
-        <input type="text">
+        <br>
+        <label>Relacione las asignaturas a las que se inscribe (máximo 2):</label><br>
+        <input type="checkbox" id="dw">
+        <label for="dw">Desarrollo web</label><br>
+        <input type="checkbox" id="Matematicas">
+        <label for="Matematicas">Matemáticas</label><br>
+        <input type="checkbox" id="estadistica">
+        <label for="estadistica">Estadística</label><br>
+        <input type="checkbox" id="adbd">
+        <label for="adbd">Administracion de bases de datos</label><br>
+        <input type="checkbox" id="ia">
+        <label for="ia">Investigación aplicada</label><br>
+        <input type="checkbox" id="apps">
+        <label for="apps">Construcción de apps empresariales</label><br>
+
     </fieldset>
 
     <!-- Información personal del aspirante -->
@@ -56,90 +68,245 @@
 
         <!-- Datos básicos -->
         <label>Primer apellido:</label><input type="text">
-        <label>Segundo apellido:</label><input type="text">
-        <label>Nombre(s):</label><input type="text">
+        <label>Segundo apellido:</label><input type="text"><br>
+        <label>Nombre de pila:</label><input type="text">
+        <label>Segundo nombre:</label><input type="text"><br>
 
         <label>Documento de identidad No:</label><input type="text">
+        <label>De:</label>
+            <select id="municipio" name="municipio" required>
+                <option value="" disabled selected>Seleccione un municipio</option>
 
+                <optgroup label="Antioquia">
+                    <option value="Medellin">Medellín</option>
+                    <option value="Bello">Bello</option>
+                    <option value="Itagui">Itagüí</option>
+                    <option value="Envigado">Envigado</option>
+                    <option value="Rionegro">Rionegro</option>
+                </optgroup>
+
+                <optgroup label="Cundinamarca">
+                    <option value="Bogota">Bogotá</option>
+                    <option value="Soacha">Soacha</option>
+                    <option value="Chia">Chía</option>
+                    <option value="Zipaquira">Zipaquirá</option>
+                    <option value="Facatativa">Facatativá</option>
+                </optgroup>
+
+                <optgroup label="Valle del Cauca">
+                    <option value="Cali">Cali</option>
+                    <option value="Palmira">Palmira</option>
+                    <option value="Buenaventura">Buenaventura</option>
+                    <option value="Tulua">Tuluá</option>
+                    <option value="Cartago">Cartago</option>
+                </optgroup>
+
+                <optgroup label="Atlántico">
+                    <option value="Barranquilla">Barranquilla</option>
+                    <option value="Soledad">Soledad</option>
+                    <option value="Malambo">Malambo</option>
+                    <option value="Puerto Colombia">Puerto Colombia</option>
+                </optgroup>
+
+                <optgroup label="Santander">
+                    <option value="Bucaramanga">Bucaramanga</option>
+                    <option value="Floridablanca">Floridablanca</option>
+                    <option value="Girón">Girón</option>
+                    <option value="Piedecuesta">Piedecuesta</option>
+                </optgroup>
+            </select>
         <!-- Selección de sexo con botones tipo radio -->
         <label>Sexo:</label>
-        <input type="radio" id="F"><label for="F">F</label>
-        <input type="radio" id="M"><label for="M">M</label><br>
+        <input type="radio" id="F" name="sexo" value="F"><label>F</label>
+        <input type="radio" id="M" name="sexo" value="M"><label>M</label><br>
 
-        <label>País:</label><input type="text">
+        <label>País:</label><input type="text" value="Colombia" disabled>
     </fieldset>
 
     <!-- Lugar y fecha de nacimiento -->
     <fieldset>
         <legend>Lugar y fecha de nacimiento:</legend>
 
-        <label>Fecha:</label><input type="text">
-        <label>Municipio:</label><input type="text">
-        <label>Departamento:</label><input type="text">
+        <label>Fecha:</label><input type="date">
+        <label for="lugar">Departamento y Municipio:</label>
+        <select id="lugar" name="municipio" required>
+            <option value="" disabled selected>Seleccione una opción</option>
+
+            <optgroup label="Antioquia">
+                <option value="Medellin">Medellín</option>
+                <option value="Bello">Bello</option>
+                <option value="Itagui">Itagüí</option>
+                <option value="Envigado">Envigado</option>
+            </optgroup>
+
+            <optgroup label="Cundinamarca">
+                <option value="Bogota">Bogotá</option>
+                <option value="Soacha">Soacha</option>
+                <option value="Chia">Chía</option>
+            </optgroup>
+
+            <optgroup label="Quindio">
+                <option value="Armenia">Armenia</option>
+                <option value="Calarca">Calarcá</option>
+                <option value="Montenegro">Montenegro</option>
+            </optgroup>
+
+            <optgroup label="Valle del Cauca">
+                <option value="Cali">Cali</option>
+                <option value="Palmira">Palmira</option>
+            </optgroup>
+
+        </select>
+
     </fieldset>
 
     <!-- Dirección de contacto -->
     <fieldset>
         <legend>Dirección de Correspondencia</legend>
 
-        <label>Departamento/Municipio:</label><input type="text">
-        <label>Teléfono:</label><input type="text">
-        <label>Email:</label><input type="text">
+        <label>Municipio:</label>
+        <select>
+            <option value="Armenia">Armenia</option>
+            <option value="Buenavista">Buenavista</option>
+            <option value="Calarca">Calarcá</option>
+            <option value="Circasia">Circasia</option>
+            <option value="Cordoba">Córdoba</option>
+            <option value="Filandia">Filandia</option>
+            <option value="Genova">Génova</option>
+            <option value="La Tebaida">La Tebaida</option>
+            <option value="Montenegro">Montenegro</option>
+            <option value="Pijao">Pijao</option>
+            <option value="Quimbaya">Quimbaya</option>
+            <option value="Salento">Salento</option>
+        </select>
+        <label>Teléfono:</label><input type="tel">
+        <label>Email:</label><input type="email">
     </fieldset>
 
     <!-- Disponibilidad del aspirante -->
     <fieldset>
         <legend>Disponibilidad de tiempo para desarrollar la cátedra</legend>
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Día</th>
+                <th>Disponible</th>
+                <th>Jornada</th>
+            </tr>
 
-        <!-- Selección de días disponibles -->
-        <label>Días:</label>
-        <input type="checkbox" id="Lunes"><label for="Lunes">Lunes</label>
-        <input type="checkbox" id="Martes"><label for="Martes">Martes</label>
-        <input type="checkbox" id="Miercoles"><label for="Miercoles">Miercoles</label>
-        <input type="checkbox" id="Jueves"><label for="Jueves">Jueves</label>
-        <input type="checkbox" id="Viernes"><label for="Viernes">Viernes</label>
-        <input type="checkbox" id="Sabado"><label for="Sabado">Sabado</label><br>
+            <tr>
+                <td>Lunes</td>
+                <td><input type="checkbox" name="lunes"></td>
+                <td>
+                    <select name="jornada_lunes">
+                        <option value="">Seleccione</option>
+                        <option value="Manana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                </td>
+            </tr>
 
-        <!-- Selección de jornada -->
-        <label>Jornada:</label>
-        <input type="radio" id="Mañana"><label for="Mañana">Mañana</label>
-        <input type="radio" id="Tarde"><label for="Tarde">Tarde</label>
+            <tr>
+                <td>Martes</td>
+                <td><input type="checkbox" name="martes"></td>
+                <td>
+                    <select name="jornada_martes">
+                        <option value="">Seleccione</option>
+                        <option value="Manana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Miércoles</td>
+                <td><input type="checkbox" name="miercoles"></td>
+                <td>
+                    <select name="jornada_miercoles">
+                        <option value="">Seleccione</option>
+                        <option value="Manana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Jueves</td>
+                <td><input type="checkbox" name="jueves"></td>
+                <td>
+                    <select name="jornada_jueves">
+                        <option value="">Seleccione</option>
+                        <option value="Manana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Viernes</td>
+                <td><input type="checkbox" name="viernes"></td>
+                <td>
+                    <select name="jornada_viernes">
+                        <option value="">Seleccione</option>
+                        <option value="Manana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Sábado</td>
+                <td><input type="checkbox" name="sabado"></td>
+                <td>
+                    <select name="jornada_sabado">
+                        <option value="">Seleccione</option>
+                        <option value="Manana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+        <br>
     </fieldset>
 
-    <!-- Información sobre documentos adjuntos -->
-    <fieldset>
-        <legend>Documentos adjuntos</legend>
+        <!-- Información sobre documentos adjuntos -->
+        <fieldset>
+            <legend>Documentos adjuntos</legend>
 
-        <label>Hoja de vida, soportada en (Número de folios entregados)</label>
-        <input type="text"><br>
+            <label>Hoja de vida</label>
+            <input type="file"><br>
 
-        <label>Fecha y hora de recepción de documentos:</label>
-        <input type="text" id="Fecha">
-        <input type="text" id="Hora">
-    </fieldset>
+        </fieldset>
 
-    <!-- Declaración informativa -->
-    <fieldset>
-        <legend>Documentos adjuntos a este formulario</legend>
+        <!-- Declaración informativa -->
+        <fieldset>
+            <legend>Documentos adjuntos a este formulario</legend>
 
         <!-- Texto descriptivo del proceso de inscripción -->
-        <p>
-            La hoja de vida del profesional, arriba señalado se radicó ante la Secretaria del
-            Area Académica de la Escuela, con el fin de inscribirse para participar dentro de
-            la convocatoria de selección de profesionales para conformar el Banco de elegibles
-            como docentes hora cátedra de la Escuela de Policia Rafael Reyes, en los programas
-            de TÉCNICO PROFESIONAL EN SERVICIO DE POLICÍA
-        </p>
-    </fieldset>
+             <p>
+            La hoja de vida del profesional anteriormente mencionado fue radicada
+            ante la Secretaría del Área Académica de la Escuela, con el propósito
+            de inscribirse en la convocatoria para la selección de profesionales que
+            conformarán el Banco de Elegibles como docentes hora cátedra de la Escuela
+            de Policía Rafael Reyes.
+            </p>
+        </fieldset>
 
-    <!-- Firmas -->
-    <label>Firma del aspirante (Nombres y Apellidos):</label>
-    <input type="text"><br>
+        <!-- Firmas -->
+        <label>Firma del aspirante:</label>
+        <button type="button" onclick="alert('CODIGO: 1005')">Generar código</button><br>
+        <input type="text" id="código verificación">
+        <button type="button" onclick="alert('formulario enviado, gracias por tenernos encuenta :)')">Enviar</button>
 
-    <label>Firma funcionario que recepciono el cargo:</label>
-    <input type="text">
+    </form>
 
-</form>
-
+    <script>
+        function fechaActual(){
+            const ahora = new Date();
+            const fechaFormateada = ahora.toLocaleDateString();
+            document.getElementById("fechaActual").value = fechaFormateada;
+        }
+        fechaActual();
+    </script>
 </body>
 </html>
