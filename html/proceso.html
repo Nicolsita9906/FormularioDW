@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../css/style2.css">
+    <title>Proceso</title>
+</head>
+<body>
+<h1>Proceso de inscripción</h1>
+<div class="process-box">
+        <h1>Login del funcionario</h1>
+    <form id="estado">
+        <fieldset>
+            <label>Por favor ingrese su cedula:</label><br>
+            <input type="text"><br><br>
+            <button type="submit">Ver estado</button>
+        </fieldset>
+    </form>
+
+        <div id="mensaje" class="mensaje">
+            Su solicitud está en espera
+        </div>
+    </div>
+<script>
+    document.getElementById("estado").addEventListener("submit", function(event) {
+        event.preventDefault(); // evita que recargue
+        document.getElementById("mensaje").style.display = "block";
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body {
+    font-family: 'Inter', sans-serif; /* Define la fuente principal del sitio */
+    background-color: #ffffff; /* Color de fondo gris claro */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+}
+
+h1{
+    text-align: center;
+}
+
+form {
+    width: 400px;          /* tamaño del cuadrito */
+    margin: 50px auto;     /* lo centra */
+    padding: 20px;
+    background-color: #cef4bd;
+    border-radius: 10px;
+}
+
+fieldset {
+    width: 300px;      /* tamaño del cuadrito */
+    margin: 40px auto; /* lo centra horizontalmente */
+    border: none;          /* quita el borde grande */
+    background: #cef4bd;
+
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+
+    background-color: #20792c; /* Color del botón */
+    color: white; /* Texto blanco */
+    padding: 10px 15px; /* Espacio interno */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano al pasar */
+}
+
+/* Efecto cuando el mouse pasa sobre el botón */
+button:hover {
+    background-color: #1b4f72; /* Azul más oscuro al pasar el cursor */
+}
+.mensaje {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ffc000;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

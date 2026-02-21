@@ -1,7 +1,7 @@
 /* Estilos generales del cuerpo de la página */
 body {
     font-family: 'Inter', sans-serif; /* Define la fuente principal del sitio */
-    background-color: #f4f4f4; /* Color de fondo gris claro */
+    background-color: #cef4bd; /* Color de fondo gris claro */
     padding: 20px; /* Espacio interno alrededor del contenido */
 }
 
@@ -39,7 +39,7 @@ input {
 
 /* Estilo del botón */
 button {
-    background-color: #2e86de; /* Color azul del botón */
+    background-color: #20792c; /* Color del botón */
     color: white; /* Texto blanco */
     padding: 10px 15px; /* Espacio interno */
     border: none; /* Elimina el borde */
@@ -65,3 +65,14 @@ th, td {
 th {
     background-color: #f4f4f4;
 }
+menu{
+    list-style: none;        /* quita los puntos */
+    display: flex;           /* los pone en línea */
+    justify-content: center; /* centra el menú */
+    gap: 25px;               /* espacio entre opciones */
+    padding: 0;
+}
+menu a:hover {
+    color: #1b4f72;
+}
+

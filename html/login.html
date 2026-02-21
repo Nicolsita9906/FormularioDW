@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Conexión previa con Google Fonts para mejorar rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importación de las fuentes Inter y Roboto Condensed -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+
     <title>Login</title>
+
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../css/style2.css">
 </head>
+
 <body>
+<div class="login-box">
+    <h1>Login del funcionario</h1>
+
+    <form>
+        <fieldset>
+            <label>Por favor ingrese su usuario:</label><br>
+            <input id="usuario" type="text" placeholder="Usuario"><br>
+            <label>Por favor ingrese su contraseña: </label><br>
+            <input id="pass" type="password" placeholder="Contraseña"><br>
+            <button type="submit">Ingresar</button>
+        </fieldset>
+    </form>
+</div>
 
 </body>
 </html>
